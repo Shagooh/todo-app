@@ -8,11 +8,7 @@ import userRoute from "./routes/user.route.js";
 export const app = express();
 
 app.use(express.json());
-app.use(
-  cors({
-    origin: VITE_BASE_URL,
-  })
-);
+app.use(cors());
 app.use("/todos", todoRoute);
 app.use("/users", userRoute);
 
